@@ -81,12 +81,12 @@ class Blob(models.Model):
 
     def __str__(self):
         return self.path
-    
+
     def get_absolute_url(self):
         return reverse(
-            'public_link', 
+            'public_link',
             kwargs={
-                'bucket_name': self.bucket.name, 
+                'bucket_name': self.bucket.name,
                 'path': self.path
                 }
             )
